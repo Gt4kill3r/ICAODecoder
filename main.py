@@ -2,7 +2,6 @@
 version = "24022021"
 
 def start():
- #clear()
  print("===================================")
  print("Aircraft Type Decoder - v. " + version)
  print("===================================")
@@ -331,7 +330,7 @@ def getting_aircraft_type():
    print(ICAO[converted_to_upper])
   except:
    print("Unknown aircraft type")
- else: quit()
+ else: quit("Have a nice day!")
  print(" ")
  getting_aircraft_type()
 
