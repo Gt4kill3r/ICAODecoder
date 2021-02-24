@@ -1,10 +1,8 @@
 # Coded by Gt4kill3r - gt4kill3r@gmail.com
-version = "22022021"
-import os
-clear = lambda: os.system('cls')
+version = "24022021"
 
 def start():
- clear()
+ #clear()
  print("===================================")
  print("Aircraft Type Decoder - v. " + version)
  print("===================================")
@@ -103,7 +101,6 @@ def getting_aircraft_type():
  "B74R": "Boeing 747SR",
  "B74S": "Boeing 747SP",
  "B752": "Boeing 757-200",
- "B752": "Boeing 757F",
  "B753": "Boeing 757-300",
  "B762": "Boeing 767-200",
  "B763": "Boeing 767-300",
@@ -325,15 +322,17 @@ def getting_aircraft_type():
  "YK42": "Yakovlev Yak-42",
  "YS11": "NAMC YS-11",
  }
- print("Enter aircraft type (ICAO Code):", end=' ')
- type=input()
+ print("Enter aircraft type (ICAO Code) or Q to end:", end=' ')
+ user_input=input()
+ converted_to_upper=user_input.upper()
  print(" ")
- try:
-  print(ICAO[type])
- except:
-  print("Unknown aircraft type")
+ if converted_to_upper!="Q":
+  try:
+   print(ICAO[converted_to_upper])
+  except:
+   print("Unknown aircraft type")
+ else: quit()
  print(" ")
- input("Press Enter to try different code or CTRL-C to exit")
- start()
+ getting_aircraft_type()
 
 start()
